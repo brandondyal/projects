@@ -323,5 +323,28 @@ footer {
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eee; }
 
+/******************
+FLICKR PAGE
+******************/
+#flickr_photos img {
+  max-width: 100%; }
+
+/******************
+DEPTH CHARTS
+*******************/
+.team_box {
+  max-width: 250px;
+  margin: 2.5% auto; }
+
+.team_box img {
+  float: left; }
+
+.team_box ul {
+  list-style-type: none; }
+
+@media screen and (max-width: 749px) {
+  .team_box {
+    float: none; } }
+
 
 /*# sourceMappingURL=main.css.map */

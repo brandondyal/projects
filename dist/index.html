@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/app.min.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- cdns -->
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -76,7 +75,7 @@
                     <div class="intro-text">
                         <span class="name">Web Developer</span>
                         <hr class="star-light">
-                    <!--    <span class="skills">Web Developer - Data Scientist - Treehouse Teacher</span> -->
+                    <!--    <span class="skills">List of stuff</span> -->
                     </div>
                 </div>
             </div>
@@ -142,7 +141,7 @@
                 </div>
                 <div class="col-lg-4">
                     <p>I am proficient in: HTML5, CSS3 and JavaScript (ECMAScript and jQuery)</p>
-                    <p>I am familiar with: AngularJS, Node.js, Express.js, MongoDB, Java and Microsoft SQL Server 2012.</p>
+                    <p>I am familiar with: AngularJS, Node.js, Express.js, Gulp, MongoDB, Microsoft SQL Server 2012 and version control with Git.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#contact" class="btn btn-lg btn-outline">
@@ -178,6 +177,13 @@
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -249,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container modal_container">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
@@ -257,13 +263,18 @@
                             <hr class="star-primary">
                             <p>Utilizes flickr's public feed API to return the twenty most recently posted pictures by tag.</p>
                             <form id="flickr_search">
-                            <input type="search" name="flickr_search_input" id="flickr_search_input" class="form-control" placeholder="Enter a tag">
-                            
-                            <button type="submit" id="flickr_search_button" class="btn btn-success btn-lg">SEARCH</button>
+                                <div class="form-group">
+                                    <input type="search" name="flickr_search_input" id="flickr_search_input" class="form-control" placeholder="Enter a tag">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" id="flickr_search_button" class="btn btn-primary btn-lg btn-block">SEARCH</button>
+                                </div>    
                             </form>
-                            <div id="flickr_photos"></div>
+                            <div id="flickr_photos" class="container-fluid"></div>
 
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <div class="row">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,7 +289,7 @@
                     </div>
                 </div>
             </div>
-            <div class="container modal_container">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
@@ -288,14 +299,12 @@
                             <img src="img/portfolio/droidPage.png" class="img-responsive img-centered" alt="image of an astromech droid">
 
                               <form id="droid_translator">
-
-                                <fieldset>
-
-                                <input type="text" id="user_input" class="form-control" placeholder="Enter your text">
-                                <button id="translate_button" class="btn btn-success btn-lg">TRANSLATE</button>
-
-                               </fieldset>
-
+                                <div class="form-group">  
+                                    <input type="text" id="user_input" class="form-control" placeholder="Enter your text">
+                                </div>
+                                <div class="form-group">    
+                                    <button id="translate_button" class="btn btn-success btn-lg">TRANSLATE</button>
+                                </div>
                              </form>
 
                       <div id='oops'></div>
@@ -322,8 +331,8 @@
                             <h2>NFL Offensive Depth Charts API</h2>
                             <hr class="star-primary">
                             <p>I was looking for a free, easy to access API that contained the current offensive depth charts for every NFL team. I didn't have much luck so I created one. JSON data is retrieved from an AJAX call and formatted into HTML.</p>
-                            <div id="depth_charts">
-                            </div>
+                                                       
+                            <div id="depth_charts" class="row"></div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -333,12 +342,6 @@
     </div>
 
     <script src="js/app.min.js"></script>
-
-    <script src="js/flickrSearch.js"></script>
-
-    <script src="js/droid.js"></script>
-
-    <script src="js/depthChart.js"></script>
     
     <!-- Plugin JavaScript, CDN -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>

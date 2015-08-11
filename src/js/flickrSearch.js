@@ -15,16 +15,16 @@ $(document).ready(function () {
 
 	function displayPhotos(data) {
 		if ($.isEmptyObject(data.items) === false) {
-			var photoHTML = '<ul>';
+			var photoHTML = '<div class="row">';
 			$.each( data.items,function(i, photo) {
-				photoHTML += '<li class="col-sm-4">';
+				photoHTML += '<div class="col-md-4 col-xs-6">';
 				photoHTML += '<a href=" ' + photo.link + ' ">';
-				photoHTML += '<img src=" ' + photo.media.m + ' "></a></li>';
+				photoHTML += '<img src=" ' + photo.media.m + ' "></a></div>';
 			});
-			photoHTML += '</ul>';
+			photoHTML += '</div>';
 			$('#flickr_photos').html(photoHTML);			
 		} else {
-			$('#flickr_photos').html('<h2>' + 'Sorry, ' + $searchTerm +  ' returned no results. Please try a different subject.' + '</h2>'); 
+			$('#flickr_photos').html('<h3>' + 'Sorry, ' + $searchTerm +  ' returned no results. Please try a different subject.' + '</h3>'); 
 		}
 		$submitButton.attr("disabled", false).text("SEARCH AGAIN");	
 	}

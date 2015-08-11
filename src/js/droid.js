@@ -64,7 +64,7 @@ function loadSound() {
 $btn.click(function(event) {
 	event.preventDefault();
 	if ($userInput.val() === "") {
-		$('#oops').html('<h2>' + 'Oops! No text was entered. Please enter a message to be translated.' + '</h2>');
+		$('#oops').html('<h3>' + 'Oops! No text was entered. Please enter a message to be translated.' + '</h3>');
 	} else {
 		$('#oops').html('');
 		loadSound();

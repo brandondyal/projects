@@ -44,7 +44,8 @@ gulp.task('assets', function(){
   return gulp.src([options.src + 'img/**/*', 
                    options.src + 'fonts/**/*',
                    options.src + 'font-awesome/**/*',
-                   options.src + 'mail/**/*'], {base: options.src})
+                   options.src + 'mail/**/*',
+                   options.src + 'sounds/**'], {base: options.src})
           .pipe(gulp.dest(options.dist));
 })
 
